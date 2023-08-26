@@ -12,7 +12,7 @@ management:
 
 spring:
   datasource:
-    url: jdbc:sqlserver://sqlserver-host:1433;database=jaha_app
+    url: jdbc:sqlserver://${DB_HOST:localhost}:1433;database=jaha_app
     username: sa
     password: Y03lsupr3m0@88
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
