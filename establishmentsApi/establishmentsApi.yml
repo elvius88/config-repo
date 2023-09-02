@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: info
+    py.com: debug
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

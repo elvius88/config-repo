@@ -1,0 +1,28 @@
+logging:
+  level:
+    root: info
+    py.com: debug
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://${DB_HOST:localhost}:1433;database=jaha_app
+    username: sa
+    password: Y03lsupr3m0@88
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 4
+      minimum-idle: 1
+      idle-timeout: 20000
+  jpa:
+    properties:
+      hibernate:
+        default_schema: ${DB_SCHEMA:dbo}
+
